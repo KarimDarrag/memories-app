@@ -20,6 +20,17 @@ const Home = () => {
   return (
     <Grow in>
       <Container>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          type="submit"
+          fullWidth
+          onClick={() => window.location.reload()}
+        >
+          CLICK HERE if Liked/Updated post but change is not seen
+        </Button>
+
         <Grid
           container
           justifyContent="space-between"
