@@ -18,11 +18,12 @@ import Posts from "../Posts";
 import ThumbUpAlt from "@mui/icons-material/ThumbUpAlt";
 const Post = ({ post, setCurrentId, currentId }) => {
   const dispatch = useDispatch();
+  const allPosts = useSelector((state) => state.posts);
   const [likes, setLikes] = useState(post.likes.length);
   const [value, setValue] = useState();
   const updateThis = () => {
     dispatch(likePost(post._id));
-    setValue({});
+    console.log(post.likes);
   };
   const [name, setName] = useState(post.creator);
   const classes = useStyles();
